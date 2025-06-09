@@ -1,6 +1,7 @@
 :root {
     --font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     --primary-color: #0154AA;
+    --primary-color-hover: #0554a9c6;
     --secondary-color: #F2F4F7;
     --text-color-dark: #333333;
     --text-color: #737A91;
@@ -39,7 +40,7 @@ body {
 img {
     object-fit: cover;
 }
-
+/* Navbar Styles */
 .navbar {
     background: var(--bg-color);
     padding: 16px 32px;
@@ -262,6 +263,9 @@ img {
 .search-bar button {
     width: 10%
 }
+.search-bar button:hover {
+    background: var(--primary-color-hover);
+}
 .search-bar input,
 .search-bar select {
     padding: 8px;
@@ -275,6 +279,9 @@ img {
     border: none;
     padding: 8px 16px;
     border-radius: var(--card-radius);
+}
+.search-bar button {
+background: var(--primary-color-hover);
 }
 
 .tags p {
@@ -292,6 +299,11 @@ img {
     border: 1px solid var(--text-color);
     font-size: 12px;
     font-weight: 500;
+}
+.tags span:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 .job-section {
@@ -378,6 +390,9 @@ img {
     border-radius: var(--card-radius);
     font-size: 12px;
     width: 70%;
+}
+.job-actions button:hover {
+    background: var(--primary-color-hover);
 }
 .bookmark-icon {
     margin: 5px
