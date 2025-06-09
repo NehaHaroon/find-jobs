@@ -66,10 +66,6 @@ img {
 .search-box-icon {
     display: flex;
 }
-.search-box-icon img{
-    /* width: 15px;
-    height: 15px; */
-}
 
 .search-box-wrapper input {
     padding: 0;
@@ -100,10 +96,13 @@ img {
 
 .resume-btn {
     background: var(--primary-color);
-    color: var(--border-color);
+    color: var(--bg-color);
     padding: 8px 16px;
     border: none;
     border-radius: var(--card-radius);
+}
+.resume-btn:hover {
+    background: var(--primary-color-hover);
 }
 
 .container {
@@ -397,3 +396,70 @@ background: var(--primary-color-hover);
 .bookmark-icon {
     margin: 5px
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 12px;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+        display: none;
+        z-index: 100;
+    }
+    nav.open {
+        display: flex;
+    }
+    nav a {
+        width: 100%;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        font-size: 1rem;
+    }
+    .nav-right {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 8px;
+    }
+    .search-bar{
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-bar select {
+        width: 100%;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+    .search-bar .vertical-line {
+        display: none;
+    }
+    .search-bar button {
+        width: 100%;
+    }
+    
+}
+
