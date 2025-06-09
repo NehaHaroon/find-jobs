@@ -1,5 +1,5 @@
 :root {
-    --font-family: 'NeueHaasGroteskDisplayPro', sans-serif;
+    --font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
     --primary-color: #0154AA;
     --secondary-color: #F2F4F7;
     --text-color-dark: #333333;
@@ -15,6 +15,14 @@
     --card-radius: 8px;
     --search-box-bg: #F6F9FF;
 }
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('fonts/NeueHaasDisplayBlack.woff2') format('woff2'),
+       url('fonts/NeueHaasDisplayBlack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 * {
     box-sizing: border-box;
@@ -27,6 +35,9 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+img {
+    object-fit: cover;
 }
 
 .navbar {
@@ -67,10 +78,15 @@ body {
 
 .navbar nav a {
     margin: 0 10px;
+    font-size: 16px;
+    font: 500;
     color: var(--text-color);
     text-decoration: none;
 }
 
+.navbar nav a :hover {
+    color: var(--primary-color)
+}
 .navbar nav a.active {
     color: var(--primary-color);
     font-weight: bold;
@@ -83,7 +99,7 @@ body {
 
 .resume-btn {
     background: var(--primary-color);
-    color: white;
+    color: var(--border-color);
     padding: 8px 16px;
     border: none;
     border-radius: var(--card-radius);
@@ -112,8 +128,11 @@ body {
 .profile-cover img{
     height: 100px;
     width: 100%;
-    object-fit: cover;
     border-radius: 16px 16px 0px 0px;
+}
+.profile-info {
+    top: -40px;
+    position: relative;
 }
 .user-details {
     padding: 16px;
@@ -141,8 +160,8 @@ body {
 .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 50%;
+    border: 2px solid var(--bg-color);
 }
 
 .avatar.large {
@@ -179,7 +198,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    margin: 16px
+    margin: 16px 0;
 }
 .calendar-info strong {
     color: var(--text-color-dark);
@@ -276,13 +295,24 @@ body {
 }
 
 .job-section {
-    margin-bottom: 32px;
+    margin: 10px 0px 20px 0px
 }
 
 .section-header {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color-dark)
+}
+
+.section-header a {
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 .job-grid {
@@ -299,12 +329,56 @@ body {
     box-shadow: var(--card-shadow);
     width: 220px;
 }
-
-.job-card .promoted {
-    background: #FFE58F;
+.job-details {
+    display: flex;
+}
+.job-details h4 {
+    font-weight: 500;
+    color: var(--text-color-dark);
+    font-size: 14px;
+}
+.job-details p {
+    font-weight: 500;
+    color: var(--text-color-dark);
     font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-bottom: 8px;
+}
+.job-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.job-location, .job-post-time {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-light);
+    gap: 10px;
+    margin-left: 10px;
+}
+.job-post-time a {
+    color: var(--primary-color)
+}
+.job-card .promoted {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+.job-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.job-actions button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--card-radius);
+    font-size: 12px;
+    width: 70%;
+}
+.bookmark-icon {
+    margin: 5px
 }
