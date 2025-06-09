@@ -8,6 +8,108 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">🌐</div>
+    <nav>
+      <a class="active" href="#">Find Jobs</a>
+      <a href="#">Top Companies</a>
+      <a href="#">Job Tracker</a>
+      <a href="#">My Calendar</a>
+      <a href="#">Documents</a>
+      <a href="#">Messages</a>
+      <a href="#">Notifications</a>
+    </nav>
+    <div class="nav-right">
+        <div class="search-box-wrapper">
+            <!-- <div> -->
+                <img src="assets/icons/search-circle.png" alt="">
+                <img src="assets/icons/search-stick.png" alt="">
+            <!-- </div> -->
+            <input class="search-box" type="text" placeholder="Search" />
+        </div>
+      <button class="resume-btn">Resume Builder</button>
+    </div>
+    <div class="avatar">
+      <img src="assets/images/profile-icon-image.jpg" alt="">
+    </div>
+  </header>
 
+  <main class="container">
+        <aside>
+            <div class="sidebar">
+                <div class="profile-card">
+                    <div class="profile-cover">
+                        <img src="assets/images/cover-image.jpg" alt="">
+                    </div>
+                    <div class="avatar large">
+                        <img src="assets/images/profile-image.png" alt="">
+                    </div>
+                    <div class="user-details">
+                        <h3 class="user-name">Albert Flores</h3>
+                        <p class="user-info" >Senior Product Designer  |  UI/UX Designer  |  Graphic Designer  |  Web...</p>
+                        <small class="user-location">Clinton, Maryland</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <ul class="stats">
+                    <li>Profile Visitors <span>140</span></li>
+                    <hr class="custom-hr" />
+                    
+                    <li>Resume Viewers <span>200</span></li>
+                    <hr class="custom-hr" />
+                    <li>My Jobs <span>88</span></li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div class="calendar-wrapper">
+                <div class="calendar-info">
+                    <strong>My calendar</strong>
+                    <p>Upcoming Interviews</p>
+                </div>
+                <div class="calendar-dropdown">
+                    <img src="assets/icons/drop-down-arrow.png" alt="">
+                </div>
+            </div>
+            </div>
+        </aside>
+
+    <section class="main-content">
+      <div class="search-section">
+        <h2>Find your Dream Job, <span>Albert!</span></h2>
+        <p>Explore the latest job openings and apply for the best opportunities available today!</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Job Title, Company or Keywords" />
+          <select><option>Select Location</option></select>
+          <select><option>Job Type</option></select>
+          <button>Search</button>
+        </div>
+        <div class="tags">
+          <span>Frontend</span>
+          <span>Backend</span>
+          <span>Graphic Designer</span>
+        </div>
+      </div>
+
+      <div class="job-section">
+        <div class="section-header">
+          <h3>Featured Jobs</h3>
+          <a href="#">See Featured Jobs</a>
+        </div>
+        <div class="job-grid">
+          <!-- Repeated Job Cards -->
+          <div class="job-card">
+            <div class="promoted">Promoted</div>
+            <h4>UI/UX Designer</h4>
+            <p>Teams</p>
+            <p>Seattle, USA (Remote)</p>
+            <p>1 day ago | 22 applicants</p>
+            <button>Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
